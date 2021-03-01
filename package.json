@@ -1,0 +1,28 @@
+{
+  "name": "template-vitepress",
+  "version": "1.0.0",
+  "description": "A vitepress template",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misitebao/template-vitepress.git"
+  },
+  "keywords": [
+    "vitepress",
+    "template"
+  ],
+  "author": "misitebao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/misitebao/template-vitepress/issues"
+  },
+  "homepage": "https://github.com/misitebao/template-vitepress#readme",
+  "devDependencies": {
+    "vitepress": "^0.12.2"
+  }
+}
