@@ -11,11 +11,13 @@ module.exports = {
     theme: undefined,
     themeConfig: {
         logo: '/images/misitebao.png',
-        repo: 'https://github.com/misitebao/template-vuepress', // 顶部显示的github地址
-        docsRepo: 'https://github.com/misitebao/template-vuepress', //文档内改进页面的仓库地址
+        repo: 'https://github.com/misitebao/template-viteress', // 顶部显示的github地址
+        docsRepo: 'https://github.com/misitebao/template-vitepress', //文档内改进页面的仓库地址
         docsDir: 'docs', //文档目录
         docsBranch: 'master', //分支
         editLinks: true,
+        search: true,
+        searchMaxSuggestions: 10,
         locales: {
             '/': {
                 selectText: 'Languages',
@@ -45,47 +47,33 @@ module.exports = {
                     },
                     {
                         text: 'BBB',
-                        items: [{
-                            text: 'Group1',
-                            items: [
-                                {
-                                    text: 'readme',
-                                    link: '/BBB/'
-                                },
-                                {
-                                    text: '2',
-                                    link: '#'
-                                }
-                            ]
-                        },
-                        {
-                            text: 'Group2',
-                            items: [
-                                {
-                                    text: '1',
-                                    link: '#'
-                                },
-                            ]
-                        }]
-                    }
+                        items: [
+                            { text: 'aaa', link: '/BBB/aaa' },
+                            { text: 'bbb', link: '/BBB/bbb' }
+                        ]
+                    },
                 ],
                 sidebar: {
                     '/AAA/': [
                         {
-                            title: 'AAAAAAAAAA',
-                            // path: '/AAA/aaa',
-                            // collapsable: false,
+                            text: 'AAAAAAAAAA',
+                            path: '/AAA/',
+                            collapsable: true,
                             children: [
-                                { title: "aaaaaa", link: "https://baidu.com" }
+                                { text: "aaaaaa", link: "/AAA/aaa" },
+                                { text: "bbbbbb", link: "/AAA/bbb" }
                             ]
                         }
                     ],
                     '/BBB/': [
                         {
-                            title: 'BBBBBBBBBB',
-                            // path: '/BBB/',
-                            // collapsable: false,
-                            children: []
+                            text: 'BBBBBBBBBB',
+                            path: '/BBB/',
+                            collapsable: true,
+                            children: [
+                                { text: "aaaaaa", link: "/BBB/aaa" },
+                                { text: "bbbbbb", link: "/BBB/bbb" }
+                            ]
                         }
                     ],
                 }
@@ -126,47 +114,33 @@ module.exports = {
                     },
                     {
                         text: 'BBB',
-                        items: [{
-                            text: 'Group1',
-                            items: [
-                                {
-                                    text: 'readme',
-                                    link: '/BBB/'
-                                },
-                                {
-                                    text: '2',
-                                    link: '#'
-                                }
-                            ]
-                        },
-                        {
-                            text: 'Group2',
-                            items: [
-                                {
-                                    text: '1',
-                                    link: '#'
-                                },
-                            ]
-                        }]
-                    }
+                        items: [
+                            { text: 'aaa', link: '/zh/BBB/aaa' },
+                            { text: 'bbb', link: '/zh/BBB/bbb' }
+                        ]
+                    },
                 ],
                 sidebar: {
                     '/zh/AAA/': [
                         {
-                            title: 'AAAAAAAAAA',
-                            // path: '/zh/AAA/aaa',
-                            // collapsable: false,
+                            text: 'AAAAAAAAAA',
+                            path: '/zh/AAA/',
+                            collapsable: false,
                             children: [
-                                { title: "aaaaaa", link: "https://baidu.com" }
+                                { text: "aaaaaa", link: "/zh/AAA/aaa" },
+                                { text: "bbbbbb", link: "/zh/AAA/bbb" }
                             ]
                         }
                     ],
                     '/zh/BBB/': [
                         {
-                            title: 'BBBBBBBBBB',
-                            // path: '/zh/BBB/',
-                            // collapsable: false,
-                            children: []
+                            text: 'BBBBBBBBBB',
+                            path: '/zh/BBB/',
+                            collapsable: false,
+                            children: [
+                                { text: "aaaaaa", link: "/zh/BBB/aaa" },
+                                { text: "bbbbbb", link: "/zh/BBB/bbb" }
+                            ]
                         }
                     ],
                 }
